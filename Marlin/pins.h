@@ -100,7 +100,7 @@
 * Leapfrog Driver board
 * 
 ****************************************************************************************/
-#if MB(LEAPFROG)  // Leapfrog board
+#if MB(LEAPFROG) || MB(LEAPFROG_HS) // Leapfrog boards
 #define KNOWN_BOARD 1
 
 #ifndef __AVR_ATmega1280__
@@ -147,7 +147,11 @@
 #define SDSS               11
 #define SDCARDDETECT       -1 // 10 optional also used as mode pin
 #define LED_PIN            13
+#if MB(LEAPFROG_HS)
+#define FAN_PIN            5
+#else
 #define FAN_PIN            7
+#endif
 #define PS_ON_PIN          -1
 #define KILL_PIN           -1
 #define SOL1_PIN   16
@@ -155,7 +159,11 @@
 
 #define HEATER_0_PIN       9
 #define HEATER_1_PIN       8 // 12
+#if MB(LEAPFROG_HS)
+#define HEATER_2_PIN       -1
+#else
 #define HEATER_2_PIN       11 //-1 // 13
+#endif
 #define TEMP_0_PIN         13 //D27   // MUST USE ANALOG INPUT NUMBERING NOT DIGITAL OUTPUT NUMBERING!!!!!!!!!
 #define TEMP_1_PIN         15 // 1
 #define TEMP_2_PIN         -1 // 2
