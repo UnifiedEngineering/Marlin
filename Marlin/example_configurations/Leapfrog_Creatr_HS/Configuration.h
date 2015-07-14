@@ -484,7 +484,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {(100.0/3)*2,(100.0/3)*2,9600/10,99.3}  // Corrected values for Creatr HS!
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {(100.0/3)*2,(100.0/3)*2,9600/10,100.7}  // Corrected values for Creatr HS!
 #define DEFAULT_MAX_FEEDRATE          {800, 800, 10, 50}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {3000,3000,200,8000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
